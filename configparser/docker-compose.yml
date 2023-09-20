@@ -1,0 +1,47 @@
+version: "3"
+
+services:
+  web_app_prod:
+    build:
+      context: .
+      dockerfile_inline: |
+        FROM python:3.11-bookworm
+
+        LABEL environment=prod
+        LABEL version=1.0
+
+        WORKDIR /app
+
+        COPY ./requirements.txt .
+
+        COPY ./app/ /app
+
+        RUN pip install -U pip && \
+          pip install -r requirements.txt
+
+        ENV hostname=web_app_prod
+        ENV environment=prod
+        ENV theme_type=dark
+        ENV port=5001
+        ENV debug_on=True
+
+        EXPOSE 5001
+
+        CMD ["python3", "main.py"]
+    container_name: web_app_prod
+    hostname: web_app_prod
+    networks:
+      prod-appnet:
+        ipv4_address: "172.20.0.10"
+    ports:
+      - "5001:5001"
+
+networks:
+  dev-appnet:
+    ipam:
+      config:
+        - subnet: 172.19.0.0/24
+  prod-appnet:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24

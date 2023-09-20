@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to {{ hostname }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div class="{{ 'theme-light' if theme_type == 'light' else 'theme-dark' }}">
+            <h1>Hello, Welcome!</h1>
+            <br>
+            <p>You are on the {{ hostname }} server.</p>
+            <p>This is a {{ environment }} environment. </p>
+            <p>The theme is set to {{ theme_type }}.</p>
+            <br>
+        </div>
+    </body>
+</html>
