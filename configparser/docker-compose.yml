@@ -1,47 +1,60 @@
+# Docker Compose version
 version: "3"
 
+# Define the services for our app
 services:
-  web_app_prod:
+  web_app_dev:
     build:
+      # Current directory as build context
       context: .
+      # Inline Dockerfile definition
       dockerfile_inline: |
         FROM python:3.11-bookworm
 
-        LABEL environment=prod
+        LABEL environment=dev
         LABEL version=1.0
 
+        # Working directory in the container
         WORKDIR /app
 
+        # Copying app dependencies
         COPY ./requirements.txt .
 
+        # Copying the app source code
         COPY ./app/ /app
 
+        # Installing app dependencies
         RUN pip install -U pip && \
           pip install -r requirements.txt
 
-        ENV hostname=web_app_prod
-        ENV environment=prod
-        ENV theme_type=dark
-        ENV port=5001
+        # Setting environment variables in the container
+        ENV hostname=web_app_dev
+        ENV environment=dev
+        ENV theme_type=light
+        ENV port=5000
         ENV debug_on=True
 
-        EXPOSE 5001
+        # Expose the desired port for the service
+        EXPOSE 5000
 
+        # Command to run on container start
         CMD ["python3", "main.py"]
-    container_name: web_app_prod
-    hostname: web_app_prod
+    container_name: web_app_dev
+    hostname: web_app_dev
     networks:
-      prod-appnet:
-        ipv4_address: "172.20.0.10"
+      # Use different networks based on environment
+      dev-appnet:
+        ipv4_address: "172.22.0.10"
     ports:
-      - "5001:5001"
+      - "5000:5000"  # Map host port to container port
 
+# Define the networks used in services
 networks:
   dev-appnet:
     ipam:
       config:
-        - subnet: 172.19.0.0/24
+        - subnet: 172.22.0.0/24
   prod-appnet:
     ipam:
       config:
-        - subnet: 172.20.0.0/24
+        - subnet: 172.22.1.0/24

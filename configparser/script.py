@@ -40,14 +40,17 @@ dockercompose_template = dedent("""\
     services:
       {{ hostname }}:
         build:
-          context: .  # Current directory as build context
-          dockerfile_inline: |  # Inline Dockerfile definition
+          # Current directory as build context
+          context: .
+          # Inline Dockerfile definition
+          dockerfile_inline: |
             FROM python:{{ py_version }}-bookworm
 
             LABEL environment={{ environment }}
             LABEL version={{ version }}
 
-            WORKDIR /app  # Working directory in the container
+            # Working directory in the container
+            WORKDIR /app
 
             # Copying app dependencies
             COPY ./requirements.txt .
@@ -85,11 +88,11 @@ dockercompose_template = dedent("""\
       dev-appnet:
         ipam:
           config:
-            - subnet: 172.19.0.0/24
+            - subnet: 172.22.0.0/24
       prod-appnet:
         ipam:
           config:
-            - subnet: 172.20.0.0/24
+            - subnet: 172.22.1.0/24
 """)
 
 # Create a Jinja2 template instance from the Docker Compose template
@@ -114,4 +117,4 @@ with open('docker-compose.yml', 'w', encoding='UTF-8') as f:
 # Display the rendered Docker Compose configuration for user verification
 print("="*80, "\n DOCKER COMPOSE FILE RENDERED:\n\n")
 print(dockercompose)
-print("="*80, "\nTo run the application enter the following:\n\n > docker compose up")
+print("="*80, "\nTo run the application enter the following:\n\n > docker compose up --build")
