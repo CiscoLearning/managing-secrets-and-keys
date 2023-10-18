@@ -32,15 +32,58 @@ Once your environment is set up with the requirements you can modify the setting
 python3 `script.py`
 ```
 
-After generating the Docker Compose file, you can start the application by running:
+After generating the Docker Compose file with script.py, you can build and start the application by running:
 
 ```bash
-docker compose up
+docker compose up --build
 ```
+
+### Output
+
+Depending on the settings you use in the [config.ini](config.ini) file you can change different aspects of the web application.
+
+#### Example 1
+
+The .ini file setting set to `dev` and theme set to light.
+
+```ini
+[DEFAULT]
+# Environment can be 'prod' for production or 'dev' for development
+environment = dev
+
+# The [web.app.theme] section contains theme settings for the application.
+[web.app.theme]
+# Theme type can be 'light' or 'dark'
+type = light
+```
+
+Output:
+
+![dev output and light theme](./images/flask_output_for_dev_with_light_theme_set.jpg)
+
+#### Example 2
+
+The .ini file setting set to `prod` and theme set to dark.
+
+```ini
+[DEFAULT]
+# Environment can be 'prod' for production or 'dev' for development
+environment = prod
+
+# The [web.app.theme] section contains theme settings for the application.
+[web.app.theme]
+# Theme type can be 'light' or 'dark'
+type = dark
+```
+
+Output:
+
+![dev output and light theme](./images/flask_output_for_prod_with_dark_theme_set.jpg)
 
 ## Notes
 
-- Ensure you have Docker and Docker Compose installed on your machine to run the application.
+- Ensure you have Docker and Docker Compose installed on your machine to run the application. See <https://docs.docker.com/get-docker/> for more details.
+- It is recommended that you have a python virtual environment set up.
 - This README pertains only to this specific folder within the larger repo, so refer to other parts of the repository if you need more information on other aspects of the project.
 
 ---
