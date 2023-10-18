@@ -1,0 +1,11 @@
+.theme-light {
+    background-color: blue;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.theme-dark {
+    background-color: black;
+    color: red;
+    font-family: Arial, sans-serif;
+}

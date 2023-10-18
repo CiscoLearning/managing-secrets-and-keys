@@ -1,0 +1,23 @@
+version: '3'
+services:
+  vault:
+    image: hashicorp/vault:latest
+    container_name: dev-vault
+    ports:
+      - "8200:8200"
+    environment:
+      VAULT_ADDR: 'https://0.0.0.0:8200'
+      VAULT_DEV_ROOT_TOKEN_ID: '1234QWer'
+      VAULT_TOKEN: '1234QWer'
+      VAULT_SKIP_VERIFY: 'True'
+    cap_add:
+      - IPC_LOCK
+    healthcheck:
+      retries: 5
+    command: server -dev-tls -dev-root-token-id="1234QWer" -tls-skip-verify
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge
