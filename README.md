@@ -56,13 +56,11 @@ This repository is licensed under the MIT License.
 
 For the detailed license agreement, see the [LICENSE](./LICENSE) file.
 
-For any licensing inquiries or more details, please contact [barweiss@cisco.com](mailto:barweiss@cisco.com?subject=GitHub%20CiscoLearning
-/managing_secrets_and_keys%20-%20License%20Inquiry).
+For any licensing inquiries or more details, please contact [barweiss@cisco.com](mailto:barweiss@cisco.com?subject=GitHub%20CiscoLearning_managing_secrets_and_keys%20-%20License%20Inquiry).
 
 ## Feedback and Contribution
 
 Your feedback is invaluable. If you have suggestions, questions, or wish to contribute, please [open an issue](https://github.com/CiscoLearning/managing_secrets_and_keys/issues) or [submit a pull request](https://github.com/CiscoLearning/managing_secrets_and_keys/pulls).
 
 Happy coding and stay secure!
-[Barry Weiss, Technical Education Content Developer](mailto:barweiss@cisco.com?subject=GitHub-CiscoLearning
-/managing_secrets_and_keys%20-%20General%20Inquiry)
+[Barry Weiss, Technical Education Content Developer](mailto:barweiss@cisco.com?subject=GitHub-CiscoLearning_managing_secrets_and_keys%20-%20General%20Inquiry)
