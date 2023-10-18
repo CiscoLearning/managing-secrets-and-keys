@@ -46,6 +46,18 @@ To dive deeper into the content:
 2. Explore the code and resources provided in this repository.
 3. Enroll in the [Cisco U](https://u.cisco.com/) DEVNAE course "Managing Secrets and Keys" for a comprehensive learning experience.
 
+## Licensing
+
+This repository is licensed under the MIT License.
+
+- **Permissions**: This software and derivatives may be used for commercial purposes, private use, can be modified, and can be distributed.
+- **Limitations**: The software is provided "as is", without any warranty.
+- **Conditions**: The original copyright notice and the license itself must be included in any copies or substantial uses of the software.
+
+For the detailed license agreement, see the [LICENSE](./LICENSE) file.
+
+For any licensing inquiries or more details, please contact [barweiss@cisco.com].
+
 ## Feedback and Contribution
 
 Your feedback is invaluable. If you have suggestions, questions, or wish to contribute, please [open an issue](https://github.com/CiscoLearning/managing_secrets_and_keys/issues) or [submit a pull request](https://github.com/CiscoLearning/managing_secrets_and_keys/pulls).
