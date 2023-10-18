@@ -29,7 +29,7 @@ Once you've set up your desired configuration in the `config.ini` file, run the 
 Once your environment is set up with the requirements you can modify the settings in `config.ini` and then run `script.py`:
 
 ```bash
-python3 `script.py`
+python3 script.py
 ```
 
 After generating the Docker Compose file with script.py, you can build and start the application by running:
