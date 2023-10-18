@@ -44,7 +44,7 @@ To dive deeper into the content:
 
 1. Watch Cisco Snack Minutes Episode 122.
 2. Explore the code and resources provided in this repository.
-3. Enroll in the Cisco U DEVNAE course "Managing Secrets and Keys" for a comprehensive learning experience.
+3. Enroll in the [Cisco U](https://u.cisco.com/) DEVNAE course "Managing Secrets and Keys" for a comprehensive learning experience.
 
 ## Feedback and Contribution
 
