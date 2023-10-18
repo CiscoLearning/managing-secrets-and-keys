@@ -48,7 +48,7 @@ To dive deeper into the content:
 
 ## Feedback and Contribution
 
-Your feedback is invaluable. If you have suggestions, questions, or wish to contribute, please [open an issue](#) or [submit a pull request](#).
+Your feedback is invaluable. If you have suggestions, questions, or wish to contribute, please [open an issue](https://github.com/CiscoLearning/managing_secrets_and_keys/issues) or [submit a pull request](https://github.com/CiscoLearning/managing_secrets_and_keys/pulls).
 
 Happy coding and stay secure!
 [Barry Weiss, Technical Education Content Developer](barweiss@cisco.com)
